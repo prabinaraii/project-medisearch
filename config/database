@@ -1,0 +1,53 @@
+-- 1️⃣ Create Database
+CREATE DATABASE medisearch_db;
+USE medisearch_db;
+
+-- 2️⃣ Patients Table
+CREATE TABLE patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(150) UNIQUE,
+    password VARCHAR(255),
+    location VARCHAR(255) NOT NULL
+);
+
+-- 3️⃣ Pharmacy Table
+CREATE TABLE pharmacy (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pharmacy_name VARCHAR(255),
+    pan_no VARCHAR(50) UNIQUE,
+    phone_no VARCHAR(20),
+    nmc_license VARCHAR(255),
+    dda_license VARCHAR(255),
+    password VARCHAR(255),
+    location VARCHAR(255) NOT NULL
+);
+
+-- 4️⃣ Medicine Table (Master list of all medicines)
+CREATE TABLE medicine (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE,
+    description TEXT
+);
+
+-- 5️⃣ Pharmacy_Medicine Table (Stock for each pharmacy)
+CREATE TABLE pharmacy_medicine (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pharmacy_id INT NOT NULL,
+    medicine_id INT NOT NULL,
+    quantity INT DEFAULT 0,
+    price DECIMAL(10,2),
+    expiry_date DATE,
+    FOREIGN KEY (pharmacy_id) REFERENCES pharmacy(id) ON DELETE CASCADE,
+    FOREIGN KEY (medicine_id) REFERENCES medicine(id) ON DELETE CASCADE
+);
+
+-- 6️⃣ Bookings Table
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT NOT NULL,
+    pharmacy_id INT NOT NULL,
+    booking_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE,
+    FOREIGN KEY (pharmacy_id) REFERENCES pharmacy(id) ON DELETE CASCADE
+);

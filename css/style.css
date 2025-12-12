@@ -1,0 +1,193 @@
+/* Import Kodchasan Font */
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,600;1,600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid #0056d6;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    margin-right: 8px;
+}
+
+/* Nav Links */
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.register {
+    background: #0056d6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 40px;
+}
+
+/* CENTER THE TEXT BLOCK */
+.text-box {
+    width: 45%;
+    text-align: center;
+    /* center text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* center button */
+    justify-content: center;
+    /* vertical alignment */
+    gap: 20px;
+}
+
+/* Text Style */
+.text-box h2 {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+/* Button */
+.btn {
+    background: #0056d6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* IMAGE SECTION */
+.image-box {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 300px;
+    border-radius: 50%;
+    background: #0056d6;
+    padding: 35px;
+}
+
+/*.footer{
+        background:#0056d6;
+    color:white;
+    padding:15px 0;
+    text-align:center;
+    margin-top:40px;
+    font-family:Arial, sans-serif;
+}*/
+
+/* PROFESSIONAL FOOTER */
+.footer {
+    background: #88adec;
+    color: #f7f7f7;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+    font-family: "Kodchasan", sans-serif;
+ 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-left: 3px solid #FFC107;
+    padding-left: 8px;
+}
+
+.footer-links a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 6px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+        flex-direction: column;
+    }
+}

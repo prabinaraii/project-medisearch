@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+header h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+header p {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+    justify-self: center;
+}
+
+/* Container for sidebar and main content */
+#container {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 80px); /* Full height minus header */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 20%;
+    min-width: 200px;
+    background-color: #b2b3b4;
+}
+
+.sidebar nav {
+    padding: 20px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #000000;
+}
+
+.sidebar nav a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.sidebar nav a:last-child {
+    border-bottom: none;
+}
+
+/* Main Content Area */
+.main {
+    background: #ffffff;
+    padding: 30px;
+    width: 80%;
+    flex: 1;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.main h1 {
+    color: #000000;
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.main p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        min-width: auto;
+        height: auto;
+    }
+    
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .sidebar nav a {
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+        border-right: 1px solid #34495e;
+        border-bottom: none;
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    header p {
+        text-align: center;
+    }
+}
